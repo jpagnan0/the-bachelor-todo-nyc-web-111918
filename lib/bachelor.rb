@@ -11,9 +11,11 @@ def get_contestant_name(data, occupation)
   # code here
   person = nil
   data.each do |hash_season, contestants_array|
-    contestants_array.each do |contestant|
+    contestants_array.find do |contestant|
       if contestant["occupation"] == occupation
         person = contestant["name"]
+      else
+        'Journalist'
       end
     end
   end
