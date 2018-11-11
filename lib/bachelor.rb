@@ -14,8 +14,6 @@ def get_contestant_name(data, occupation)
     contestants_array.find do |contestant|
       if contestant["occupation"] == occupation
         person = contestant["name"]
-      else
-        'Journalist'
       end
     end
   end
